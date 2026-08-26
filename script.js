@@ -900,7 +900,7 @@ quizSteps.forEach((step, stepIndex) => {
           setTimeout(() => {
 
             quizResult.textContent =
-              "3/3 เก่งมากก จำเรื่องของเราได้หมดเลย 💜🌿";
+              "15/15 เก่งมากก จำเรื่องของเราได้หมดเลย 💜🌿";
 
             quizResult.style.color = "#55b99a";
 

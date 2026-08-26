@@ -477,7 +477,7 @@ quizForm.addEventListener("submit", (event) => {
 
   if (score === 3) {
     quizResult.textContent =
-      "3/3 เก่งมากกก จำเรื่องของเราได้หมดเลย 💜🌿";
+      "15/15 เก่งมากกก จำเรื่องของเราได้หมดเลย 💜🌿";
 
     quizResult.style.color =
       "#55b99a";
@@ -888,6 +888,8 @@ quizSteps.forEach((step, stepIndex) => {
 
             quizSteps[stepIndex + 1].hidden = false;
 
+            updateQuizProgress(stepIndex + 2);
+
           }, 700);
 
         }
@@ -977,3 +979,31 @@ if (endingVideo && endingMessage) {
   });
 
 }
+const quizProgressText =
+  document.getElementById("quizProgressText");
+
+const quizProgressPercent =
+  document.getElementById("quizProgressPercent");
+
+const quizProgressBar =
+  document.getElementById("quizProgressBar");
+
+function updateQuizProgress(stepNumber) {
+
+  const totalQuestions = 15;
+
+  const percent =
+    Math.round(
+      (stepNumber / totalQuestions) * 100
+    );
+
+  quizProgressText.textContent =
+    `QUESTION ${stepNumber} / ${totalQuestions}`;
+
+  quizProgressPercent.textContent =
+    `${percent}%`;
+
+  quizProgressBar.style.width =
+    `${percent}%`;
+}
+updateQuizProgress(1);

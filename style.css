@@ -2865,3 +2865,60 @@ main {
   }
 
 }
+/* =========================
+   Quiz Progress 💜🌿
+========================= */
+
+.quiz-progress {
+  width: min(100%, 760px);
+
+  margin:
+    20px
+    auto
+    25px;
+}
+
+.quiz-progress-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 10px;
+
+  font-size: 0.85rem;
+  font-weight: 800;
+
+  color: #756985;
+}
+
+.quiz-progress-track {
+  width: 100%;
+  height: 12px;
+
+  overflow: hidden;
+
+  border-radius: 999px;
+
+  background:
+    rgba(155, 120, 232, 0.12);
+}
+
+.quiz-progress-bar {
+  height: 100%;
+
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #9b78e8,
+      #8edfc2
+    );
+
+  box-shadow:
+    0 0 15px
+    rgba(155, 120, 232, 0.2);
+
+  transition:
+    width 0.5s ease;
+}

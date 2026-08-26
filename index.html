@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>FOR PPORAIR</title>
+    <link rel="icon" type="image/jpeg" href="favicon.jpg">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <!-- =========================
+       เพลง
+  ========================== -->
+  <audio id="loveSong" loop>
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <button id="musicBtn"
+          class="music-btn"
+          type="button"
+          aria-label="เปิดหรือหยุดเพลง">
+    🎵
+  </button>
+
+
+  <!-- =========================
+       หัวใจลอย
+  ========================== -->
+  <div id="heartContainer"
+       class="heart-container"
+       aria-hidden="true">
+  </div>
+
+
+  <!-- =========================
+       Progress ด้านบน
+       ไม่บอกชื่อด่าน
+  ========================== -->
+  <div class="progress-bar"
+       aria-hidden="true">
+
+    <span class="progress-heart active">💜</span>
+    <span class="progress-dot">•</span>
+
+    <span class="progress-heart">♡</span>
+    <span class="progress-dot">•</span>
+
+    <span class="progress-heart">♡</span>
+    <span class="progress-dot">•</span>
+
+    <span class="progress-heart">♡</span>
+    <span class="progress-dot">•</span>
+
+    <span class="progress-heart">♡</span>
+    <span class="progress-dot">•</span>
+
+    <span class="progress-heart">♡</span>
+    <span class="progress-dot">•</span>
+
+    <span class="progress-heart">♡</span>
+    <span class="progress-dot">•</span>
+
+    <span class="progress-heart">♡</span>
+    <span class="progress-dot">•</span>
+
+    <span class="progress-heart">♡</span>
+
+  </div>
+
+
+  <main>
+
+    <!-- =====================================================
+         หน้า 1 : SECRET CODE
+    ====================================================== -->
+    <section
+      class="screen active"
+      id="screen-lock"
+      data-screen="0">
+
+      <div class="page-content lock-content">
+
+        <div class="big-icon">
+          🔐
+        </div>
+
+        <p class="small-title">
+          SECRET FOR YOU
+        </p>
+
+        <h1>
+          ใส่รหัสลับเพื่อเปิดเรื่องราวของเรา
+          <span>💜</span>
+        </h1>
+
+        <p class="subtitle">
+          มีแค่เธอที่ควรรู้รหัสนี้นะ 🌿
+        </p>
+
+        <form id="passwordForm"
+              class="password-form">
+
+          <label for="password"
+                 class="sr-only">
+            รหัสลับ
+          </label>
+
+<div class="code-wrapper">
+
+  <input class="code-box" type="text" inputmode="numeric" maxlength="1">
+  <input class="code-box" type="text" inputmode="numeric" maxlength="1">
+  <input class="code-box" type="text" inputmode="numeric" maxlength="1">
+  <input class="code-box" type="text" inputmode="numeric" maxlength="1">
+  <input class="code-box" type="text" inputmode="numeric" maxlength="1">
+  <input class="code-box" type="text" inputmode="numeric" maxlength="1">
+
+  <input id="password" type="hidden">
+  <button id="togglePassword" type="button" hidden></button>
+
+</div>
+
+          <button
+            type="submit"
+            class="main-btn">
+            เปิดเลย 💜
+          </button>
+
+        </form>
+
+        <p id="passwordMessage"
+           class="form-message"
+           aria-live="polite">
+        </p>
+
+        <p class="hint">
+          Hint : วันที่สำคัญของเรา 🤭
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         หน้า 2 : ซองจดหมาย
+    ====================================================== -->
+    <section
+      class="screen"
+      id="screen-envelope"
+      data-screen="1"
+      hidden>
+
+      <div class="page-content">
+
+        <p class="small-title">
+          A LITTLE MESSAGE
+        </p>
+
+        <h1>
+          มีอะไรอยากให้เธออ่าน...
+        </h1>
+
+        <p class="subtitle">
+          แต่ต้องเปิดซองนี้ก่อนนะ 💌
+        </p>
+
+        <button
+          id="openEnvelopeBtn"
+          class="envelope-btn"
+          type="button">
+
+          <span class="envelope">
+            💌
+          </span>
+
+          <span>
+            แตะเพื่อเปิดจดหมาย
+          </span>
+
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         หน้า 3 : WELCOME
+    ====================================================== -->
+    <section
+      class="screen"
+      id="screen-welcome"
+      data-screen="2"
+      hidden>
+
+      <div class="page-content welcome-content">
+
+        <div class="decorative-hearts">
+          💜 🌿 🤍
+        </div>
+
+        <p class="welcome-script">
+          Welcome
+        </p>
+
+        <h1>
+          to our story
+        </h1>
+
+        <p class="welcome-text">
+          ขอบคุณที่เข้ามาในชีวิตเค้านะ
+          <br>
+          เว็บนี้เค้าตั้งใจทำให้พะแอ๊ะโดยเฉพาะ
+          <br>
+          อยากให้เธอค่อย ๆ เปิดดูความทรงจำของเราไปด้วยกัน
+        </p>
+
+        <button
+          id="startStoryBtn"
+          class="main-btn"
+          type="button">
+          Start my lovee
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         หน้า 4 : OUR JOURNEY
+    ====================================================== -->
+    <section
+      class="screen journey-screen"
+      id="screen-journey"
+      data-screen="3"
+      hidden>
+
+      <div class="journey-header">
+
+        <p class="small-title">
+          OUR JOURNEY
+        </p>
+
+        <h1>
+          ความทรงจำของเรา 
+        </h1>
+
+        <p class="subtitle">
+          ตั้งแต่วันแรกจนถึงวันนี้
+        </p>
+
+      </div>
+
+
+      <div class="journey-wrapper">
+
+        <button
+          id="journeyPrev"
+          class="journey-arrow"
+          type="button"
+          aria-label="เดือนก่อนหน้า">
+          ‹
+        </button>
+
+
+        <div
+          id="journeyTrack"
+          class="journey-track">
+
+
+          <!-- 01 -->
+          <article class="month-card">
+
+            <p class="month-name purple">
+              JUNE 2025 💜
+            </p>
+
+            <img
+              src="images/01-june-2025.jpg"
+              alt="ความทรงจำเดือนมิถุนายน 2025">
+
+            <p class="month-location">
+              📍 เจอกันครั้งแรกที่มพ.
+            </p>
+
+            <p class="month-text">
+              เดือนแรกที่เค้าได้เจอเธอครั้งแรก
+              เธอบ่นว่ารูปนี้ไม่สวย
+              แต่เค้าว่ามันน่ารักดีนะ 🤍
+            </p>
+
+          </article>
+
+
+          <!-- 02 -->
+          <article class="month-card">
+
+            <p class="month-name mint">
+              JULY 2025 🌿
+            </p>
+
+            <img
+              src="images/02-july-2025.jpg"
+              alt="ความทรงจำเดือนกรกฎาคม 2025">
+
+            <p class="month-location">
+              📍 ไปบ้านเธอครั้งแรกก
+            </p>
+
+            <p class="month-text">
+              อีกหนึ่งเดือนที่ได้ใช้เวลาด้วยกันมากขึ้น
+              และเป็นเดือนเกิดเธอ
+              แต่ไม่มีรูปตอนวันเกิดเธอเพราะไม่ได้ถ่ายย
+            </p>
+
+          </article>
+
+
+          <!-- 03 -->
+          <article class="month-card">
+
+            <p class="month-name purple">
+              AUGUST 2025 💜
+            </p>
+
+            <img
+              src="images/03-august-2025.jpg"
+              alt="ความทรงจำเดือนสิงหาคม 2025">
+
+            <p class="month-location">
+              📍 ไปร้องเกะ
+            </p>
+
+            <p class="month-text">
+              เดือนนี้คบกันได้ 3 เดือน
+              เดือนนี้เธอไม่สบายเค้าเลยซื้อยาไปให้
+              แล้วก็ไปร้องเกะด้วยกันแล้วก็มีเพื่อนเธอด้วย
+            </p>
+
+          </article>
+
+
+          <!-- 04 -->
+          <article class="month-card">
+
+            <p class="month-name mint">
+              SEPTEMBER 2025 🌿
+            </p>
+
+            <img
+              src="images/04-september-2025.jpg"
+              alt="ความทรงจำเดือนกันยายน 2025">
+
+            <p class="month-location">
+              📍 ไปเชียงใหม่
+            </p>
+
+            <p class="month-text">
+              เดือนนี้ไปเชียงใหม่กับเธอ
+              เป็นครั้งแรกที่เค้าได้ไปเที่ยวตจว.กับเธอ
+              เค้ามีความสุขมากกก
+            </p>
+
+          </article>
+
+
+          <!-- 05 -->
+          <article class="month-card">
+
+            <p class="month-name purple">
+              OCTOBER 2025 💜
+            </p>
+
+            <img
+              src="images/05-october-2025.jpg"
+              alt="ความทรงจำเดือนตุลาคม 2025">
+
+            <p class="month-location">
+              📍 เชียงคำำ
+            </p>
+
+            <p class="month-text">
+              เดือนนี้เธอเปิดเทอมแล้ว
+              แล้วเธอกลับบ้านเค้าเลยมาหา
+              มาแต่งงานที่คูเมือง56654
+            </p>
+
+          </article>
+
+
+          <!-- 06 -->
+          <article class="month-card">
+
+            <p class="month-name mint">
+              NOVEMBER 2025 🌿
+            </p>
+
+            <img
+              src="images/06-november-2025.jpg"
+              alt="ความทรงจำเดือนพฤศจิกายน 2025">
+
+            <p class="month-location">
+              📍 ไปเติมความหวาน
+            </p>
+
+            <p class="month-text">
+              ยิ่งเวลาผ่านไป
+              เค้ายิ่งรู้สึกว่าเรามีเรื่องราวร่วมกันเยอะขึ้นเรื่อย ๆ
+              และเค้าก็อยากเก็บทุกช่วงเวลาของเราเอาไว้
+            </p>
+
+          </article>
+
+
+          <!-- 07 -->
+          <article class="month-card">
+
+            <p class="month-name purple">
+              DECEMBER 2025 💜
+            </p>
+
+            <img
+              src="images/07-december-2025.jpg"
+              alt="ความทรงจำเดือนธันวาคม 2025">
+
+            <p class="month-location">
+              📍 ส่งท้ายปีที่บ้านเธอ
+            </p>
+
+            <p class="month-text">
+              ปลายปีแรกของเราด้วยกัน
+              ขอบคุณสำหรับทุกอย่างที่เกิดขึ้นในปีนี้นะ
+              ทั้งเรื่องดี ๆ และเรื่องที่ทำให้เราได้เรียนรู้กันมากขึ้น
+              เค้ารักเธอ
+            </p>
+
+          </article>
+
+
+          <!-- 08 -->
+          <article class="month-card">
+
+            <p class="month-name mint">
+              JANUARY 2026 🌿
+            </p>
+
+            <img
+              src="images/08-january-2026.jpg"
+              alt="ความทรงจำเดือนมกราคม 2026">
+
+            <p class="month-location">
+              📍 พะเเอ๊ะ
+            </p>
+
+            <p class="month-text">
+              เปิดปีด้วยการไปดูหนังด้วยกัน
+              เป็นวันที่สนุกมาก ๆ เลยในเดือนนี้
+            </p>
+
+          </article>
+
+
+          <!-- 09 -->
+          <article class="month-card">
+
+            <p class="month-name purple">
+              FEBRUARY 2026 💜
+            </p>
+
+            <img
+              src="images/09-february-2026.jpg"
+              alt="ความทรงจำเดือนกุมภาพันธ์ 2026">
+
+            <p class="month-location">
+              📍 เดือนแห่งความรัก
+            </p>
+
+            <p class="month-text">
+              เราไปงานอนุสรณ์ด้วยกันตั้งหลายวันแนะ
+              ได้ทั้งเล่นทั้งกินจนพุงออก
+            </p>
+
+          </article>
+
+
+          <!-- 10 -->
+          <article class="month-card">
+
+            <p class="month-name mint">
+              MARCH 2026 🌿
+            </p>
+
+            <img
+              src="images/10-march-2026.jpg"
+              alt="ความทรงจำเดือนมีนาคม 2026">
+
+            <p class="month-location">
+              📍 ความทรงจำของเดือนนี้
+            </p>
+
+            <p class="month-text">
+              อีกเดือนที่เราเติบโตไปด้วยกัน
+              ค่อย ๆ รู้จักนิสัย ความชอบ
+              และความรู้สึกของกันและกันมากกว่าเดิม
+            </p>
+
+          </article>
+
+
+          <!-- 11 -->
+          <article class="month-card">
+
+            <p class="month-name purple">
+              APRIL 2026 💜
+            </p>
+
+            <img
+              src="images/11-april-2026.jpg"
+              alt="ความทรงจำเดือนเมษายน 2026">
+
+            <p class="month-location">
+              📍 ความทรงจำของเดือนนี้
+            </p>
+
+            <p class="month-text">
+              ไม่ว่าจะได้ออกไปไหนด้วยกัน
+              หรือแค่ใช้เวลาธรรมดา ๆ
+              เค้าก็ชอบนะ
+              เพราะสุดท้ายสิ่งที่ทำให้ช่วงเวลานั้นพิเศษคือเธอ
+            </p>
+
+          </article>
+
+
+          <!-- 12 -->
+          <article class="month-card">
+
+            <p class="month-name mint">
+              MAY 2026 🌿
+            </p>
+
+            <img
+              src="images/12-may-2026.jpg"
+              alt="ความทรงจำเดือนพฤษภาคม 2026">
+
+            <p class="month-location">
+              📍 ก่อนครบรอบหนึ่งปี
+            </p>
+
+            <p class="month-text">
+              ใกล้หนึ่งปีแล้วนะ
+              ย้อนกลับไปดูรูปแรก ๆ แล้วรู้สึกว่า
+              เราผ่านอะไรด้วยกันมาเยอะเหมือนกัน
+              ขอบคุณที่ยังเดินมาด้วยกันจนถึงตรงนี้
+              หยกรักแพรไหมนะ
+            </p>
+
+          </article>
+
+
+          <!-- 13 -->
+          <article class="month-card">
+
+            <p class="month-name purple">
+              JUNE 2026 💜
+            </p>
+
+            <img
+              src="images/13-june-2026.jpg"
+              alt="ครบรอบหนึ่งปี">
+
+            <p class="month-location">
+              📍 1 Year 🎂
+            </p>
+
+            <p class="month-text">
+              หนึ่งปีแล้วนะ
+              จากวันที่เรื่องราวของเราเริ่มต้น
+              จนวันนี้มีทั้งรูป ความทรงจำ เสียงหัวเราะ
+              และเรื่องราวเต็มไปหมด
+              สุขสันต์หนึ่งปีของเรานะแฟน 💜
+            </p>
+
+          </article>
+
+
+          <!-- 14 -->
+          <article class="month-card">
+
+            <p class="month-name mint">
+              JULY 2026 🌿
+            </p>
+
+            <img
+              src="images/14-july-2026.jpg"
+              alt="ความทรงจำเดือนกรกฎาคม 2026">
+
+            <p class="month-location">
+              📍 กรกฏาปีที่สองของเรา
+            </p>
+
+            <p class="month-text">
+              สุขสันต์วันเกิดย้อนหลังนะ
+              สุขภาพแข็งแรง
+              อยู่ให้รักแบบนี้ไปเรื่อย ๆ
+              บ่นเค้าไปนาน ๆ
+              ขอโทษที่ไม่อวยพรวันเกิดคนแรก
+            </p>
+
+          </article>
+
+
+          <!-- 15 -->
+          <article class="month-card">
+
+            <p class="month-name purple">
+              AUGUST 2026 💜
+            </p>
+
+            <img
+              src="images/15-august-2026.jpg"
+              alt="เดือนที่ 15 ของเรา">
+
+            <p class="month-location">
+              📍 Our 15th Month
+            </p>
+
+            <p class="month-text">
+              15 เดือนแล้วนะเธอ
+              ขอบคุณที่เป็นทั้งคนในรูป
+              คนในความทรงจำ
+              และคนที่อยู่ในชีวิตเค้ามาตลอด
+              แล้วก็ขอโทษที่แย่
+              ไม่เชื่อฟังเธอ ดื้อด้วย
+              รักเธอนะ
+            </p>
+
+          </article>
+
+        </div>
+
+
+        <button
+          id="journeyNext"
+          class="journey-arrow"
+          type="button"
+          aria-label="เดือนถัดไป">
+          ›
+        </button>
+
+      </div>
+
+
+      <p class="continue-text">
+        To be continued... 🌿💜
+      </p>
+
+      <button
+        id="finishJourneyBtn"
+        class="main-btn"
+        type="button">
+        ไปต่อ 💜
+      </button>
+
+    </section>
+
+
+    <!-- =====================================================
+         หน้า 5 : LOVE COUNTER
+    ====================================================== -->
+    <section
+      class="screen"
+      id="screen-counter"
+      data-screen="4"
+      hidden>
+
+      <div class="page-content">
+
+        <p class="small-title">
+          LOVE COUNTER
+        </p>
+
+        <h1>
+          เราคบกันมาแล้ว 💜
+        </h1>
+
+
+        <div class="counter-main">
+
+          <div class="counter-box big">
+            <span id="daysTogether">0</span>
+            <small>วัน</small>
+          </div>
+
+        </div>
+
+
+        <div class="counter-small">
+
+          <div class="counter-box">
+            <span id="hoursTogether">00</span>
+            <small>ชั่วโมง</small>
+          </div>
+
+          <div class="counter-box">
+            <span id="minutesTogether">00</span>
+            <small>นาที</small>
+          </div>
+
+          <div class="counter-box">
+            <span id="secondsTogether">00</span>
+            <small>วินาที</small>
+          </div>
+
+        </div>
+
+
+        <p class="counter-date">
+          ตั้งแต่วันที่ 1 มิถุนายน 2025 🌿
+        </p>
+
+        <button
+          id="counterNextBtn"
+          class="main-btn"
+          type="button">
+          ยังมีต่ออีกนะ 🤭
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         หน้า 6 : QUIZ
+    ====================================================== -->
+    <section
+      class="screen"
+      id="screen-quiz"
+      data-screen="5"
+      hidden>
+
+      <div class="page-content quiz-content">
+
+        <p class="small-title">
+          QUIZ ABOUT US
+        </p>
+
+        <h1>
+          คำถามเกี่ยวกับเรา 💜
+        </h1>
+
+        <p class="subtitle">
+          ตอบถูกให้ครบทั้ง 3 ข้อ
+          เพื่อรับหัวใจของเค้า 
+        </p>
+
+
+       <form id="quizForm">
+
+  <!-- ข้อ 1 -->
+  <div class="quiz-step active" data-step="1" data-answer="A">
+
+    <div class="quiz-number">
+      QUESTION 1 / 3
+    </div>
+
+    <div class="quiz-hearts">
+      💜 ♡ ♡
+    </div>
+
+    <h2 class="quiz-title">
+      เราเจอกันครั้งแรกวันไหน?
+    </h2>
+
+    <div class="quiz-options">
+
+      <button type="button" class="quiz-option" data-value="A">
+        <span>A</span>
+        7 มิถุนายน
+      </button>
+
+      <button type="button" class="quiz-option" data-value="B">
+        <span>B</span>
+        8 มิถุนายน
+      </button>
+
+      <button type="button" class="quiz-option" data-value="C">
+        <span>C</span>
+        28 มิถุนายน
+      </button>
+
+      <button type="button" class="quiz-option" data-value="D">
+        <span>D</span>
+        29 มิถุนายน
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- ข้อ 2 -->
+  <div class="quiz-step" data-step="2" data-answer="C" hidden>
+
+    <div class="quiz-number">
+      QUESTION 2 / 3
+    </div>
+
+    <div class="quiz-hearts">
+      💜 💜 ♡
+    </div>
+
+    <h2 class="quiz-title">
+      เจอกันครั้งแรกที่ไหน?
+    </h2>
+
+    <div class="quiz-options">
+
+      <button type="button" class="quiz-option" data-value="A">
+        <span>A</span>
+        เวียง
+      </button>
+
+      <button type="button" class="quiz-option" data-value="B">
+        <span>B</span>
+        ตึก CE
+      </button>
+
+      <button type="button" class="quiz-option" data-value="C">
+        <span>C</span>
+        สงวน
+      </button>
+
+      <button type="button" class="quiz-option" data-value="D">
+        <span>D</span>
+        หอ
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- ข้อ 3 -->
+  <div class="quiz-step" data-step="3" data-answer="B" hidden>
+
+    <div class="quiz-number">
+      QUESTION 3 / 3
+    </div>
+
+    <div class="quiz-hearts">
+      💜 💜 💜
+    </div>
+
+    <h2 class="quiz-title">
+      นอนด้วยกันครั้งแรกเพราะอะไร?
+    </h2>
+
+    <div class="quiz-options">
+
+      <button type="button" class="quiz-option" data-value="A">
+        <span>A</span>
+        ไปกินหมูกระทะ
+      </button>
+
+      <button type="button" class="quiz-option" data-value="B">
+        <span>B</span>
+        ไปดูคอนเสิร์ต
+      </button>
+
+      <button type="button" class="quiz-option" data-value="C">
+        <span>C</span>
+        ไปดูหนัง
+      </button>
+
+      <button type="button" class="quiz-option" data-value="D">
+        <span>D</span>
+        ไปเอากัน
+      </button>
+
+    </div>
+
+  </div>
+
+</form>
+
+
+        <div
+          id="quizResult"
+          class="quiz-result"
+          aria-live="polite">
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         หน้า 7 : MYSTERY GIFT
+    ====================================================== -->
+    <section
+      class="screen"
+      id="screen-gift"
+      data-screen="6"
+      hidden>
+
+      <div class="page-content">
+
+        <p class="small-title">
+          MYSTERY GIFT
+        </p>
+
+        <h1>
+          กล่องของขวัญปริศนา 🎁
+        </h1>
+
+        <p class="subtitle">
+          เก่งมาก ตอบคำถามของหยกหยกได้หมดเลย
+        </p>
+
+    <button
+  id="giftBtn"
+  class="gift-present"
+  type="button"
+  aria-label="เปิดกล่องของขวัญ">
+
+  <span class="gift-top"></span>
+  <span class="gift-bottom"></span>
+  <span class="gift-ribbon-v"></span>
+  <span class="gift-ribbon-h"></span>
+  <span class="gift-bow bow-left"></span>
+  <span class="gift-bow bow-right"></span>
+
+</button>
+
+<p class="gift-tap-text">
+  แตะกล่องเพื่อเปิดเลย 💜
+</p>
+
+
+        <div
+          id="giftMessage"
+          class="gift-message"
+          hidden>
+
+          <div class="gift-heart">
+            💜
+          </div>
+
+          <h2>
+            ของขวัญคือ...
+          </h2>
+
+          <p>
+            หัวใจของเค้าเองง 🤭
+          </p>
+
+          <button
+            id="giftNextBtn"
+            class="main-btn"
+            type="button">
+            รับแล้วไปต่อ 💜
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         หน้า 8 : LOVE LETTER
+    ====================================================== -->
+    <section
+      class="screen"
+      id="screen-letter"
+      data-screen="7"
+      hidden>
+
+      <div class="page-content">
+
+        <p class="small-title">
+          LOVE LETTER
+        </p>
+
+        <div class="letter-paper">
+
+          <h1>
+            ถึงเธอที่เค้ารักที่สุดในโลกก
+          </h1>
+
+          <p>
+            ขอบคุณที่เข้ามาในชีวิตเค้านะ ขอบคุณสำหรับทุกความทรงจำที่เราสร้างมาด้วยกัน
+            ทั้งวันที่มีความสุข วันที่งอนกัน เค้าขอโทษที่ทำให้เธอเสียใจตลอด
+          </p>
+
+          <p>
+            เค้าอาจจะไม่ได้ทำทุกอย่างได้ดีตลอด
+            มีดื้อบ้าง มีทำให้เธอบ่นบ้าง
+            แต่เค้าอยากให้เธอรู้ว่า
+            ทุกช่วงเวลาที่เราได้อยู่ด้วยกัน
+            มันมีความหมายกับเค้ามากจริง ๆ
+          </p>
+
+          <p>
+            ขอบคุณที่อยู่ด้วยกันมาจนถึงวันนี้นะ
+            ต่อจากนี้ก็ขอให้เรามีรูปเพิ่มขึ้นอีกเยอะ ๆ
+            ได้ไปเที่ยวด้วยกันอีกหลายที่
+            และมีเรื่องให้ย้อนกลับมายิ้มได้อีกเยอะเลย
+          </p>
+
+          <p class="letter-ending">
+            หยกรักแพรไหม
+          </p>
+
+        </div>
+
+        <button
+          id="letterNextBtn"
+          class="main-btn"
+          type="button">
+          อันสุดท้ายแล้ว 🥺
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         หน้า 9 : ENDING
+    ====================================================== -->
+    <section
+      class="screen"
+      id="screen-ending"
+      data-screen="8"
+      hidden>
+
+      <div class="page-content ending-content">
+
+       <div class="ending-video-wrap">
+
+ <video
+  class="ending-video"
+  controls
+  playsinline
+  muted
+  autoplay
+  loop
+  preload="metadata">
+
+  <source src="ending.mp4" type="video/mp4">
+
+</video>
+
+</div>
+
+<div id="endingMessage" hidden>
+
+  <p class="ending-script">
+    Thank you
+  </p>
+
+  <h1>
+    for being part of my life.
+  </h1>
+
+  <p class="ending-thai">
+    ขอบคุณที่เป็นส่วนหนึ่งของชีวิตเค้านะ 💜
+  </p>
+
+  <p class="ending-love">
+    รักเธอที่สุดเลยย 🌿
+  </p>
+
+</div>
+
+        <div class="love-choice">
+
+          <p>
+            บี๋ๆรักหยกหยกมั้ย? 
+          </p>
+
+          <div class="choice-buttons">
+
+            <button
+              class="love-answer"
+              type="button">
+              รักกก 💜
+            </button>
+
+            <button
+              class="love-answer"
+              type="button">
+              รักที่สุดเลยในสามโลกก
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <p class="final-continue">
+          To be continued... ♡
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- Modal สำหรับเปิดดูรูปเดือนแบบใหญ่ -->
+  <div
+    id="photoModal"
+    class="photo-modal"
+    hidden>
+
+    <button
+      id="closePhotoModal"
+      class="modal-close"
+      type="button"
+      aria-label="ปิดรูป">
+      ×
+    </button>
+
+    <img
+      id="modalImage"
+      src=""
+      alt="รูปความทรงจำ">
+
+    <h2 id="modalMonth"></h2>
+
+    <p id="modalLocation"></p>
+
+    <p id="modalText"></p>
+
+  </div>
+
+</body>
+</html>
